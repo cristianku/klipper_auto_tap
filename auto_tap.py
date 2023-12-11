@@ -29,6 +29,13 @@ class tap_CL_CNC(TapVersion):
     Multiple = 2
     Adder = 0
 
+class tap_CL_CNC_V2(TapVersion): #<--DIFF0 Start
+    Name = "CL_CNC_V2"
+    Min = 0.7
+    Max = 1.0
+    Multiple = 19.5
+    Adder = 0                    #<--DIFF0 End
+
 class tap_R8(TapVersion):
     Name = "R8"
     Min = 0.7
@@ -61,6 +68,7 @@ class AutoTAP:
         self.tap_choices = {
             "DEV":         tap_DEV,
             "CL_CNC":      tap_CL_CNC,
+            "CL_CNC_V2":   tap_CL_CNC_V2, #<--DIFF1 Added new class
             "R8":          tap_R8,
             "R6":          tap_R6,
             "VITALII_CNC": tap_VITALII_CNC
